@@ -1,0 +1,222 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "interchainTokenService_",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "caller",
+						"type": "address"
+					}
+				],
+				"name": "NotService",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "counter",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "decrease",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "encrease",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "commandId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "string",
+						"name": "sourceChain",
+						"type": "string"
+					},
+					{
+						"internalType": "bytes",
+						"name": "sourceAddress",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "tokenId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "executeWithInterchainToken",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCounter",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "interchainTokenService",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"executeWithInterchainToken(bytes32,string,bytes,bytes,bytes32,address,uint256)": {
+					"details": "Only callable by the interchain token service.",
+					"params": {
+						"amount": "The amount of tokens being transferred.",
+						"commandId": "The unique message id.",
+						"data": "The data associated with the token transfer.",
+						"sourceAddress": "The source address of the token transfer.",
+						"sourceChain": "The source chain of the token transfer.",
+						"token": "The token address.",
+						"tokenId": "The token ID."
+					},
+					"returns": {
+						"_0": "bytes32 Hash indicating success of the execution."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"executeWithInterchainToken(bytes32,string,bytes,bytes,bytes32,address,uint256)": {
+					"notice": "Executes logic in the context of an interchain token transfer."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/InterchainCounter.sol": "InterchainCounter"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@axelar-network/interchain-token-service/contracts/executable/InterchainTokenExecutable.sol": {
+			"keccak256": "0xa09b7fec9731574479c503e0c819f72317094b102508021104f7c9878f775449",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4e25cb02a13d848f07ade5c15b070d51a894dbcd17a58ba800af9d820c9019b8",
+				"dweb:/ipfs/QmapFMypYuF9sonFo9FLwd6TmqU8uibebNnZJQKh2gQAHx"
+			]
+		},
+		"@axelar-network/interchain-token-service/contracts/executable/InterchainTokenExpressExecutable.sol": {
+			"keccak256": "0xb010636eb2467e797c5864964a96e63589d751532106ef957ae6327fce6b7b58",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9289a6a21d79d60e3618df80aa451b9c4d75a2a42fd9ce62a743a4db0e06da56",
+				"dweb:/ipfs/QmZv78XJ7KkkchBJ9yWVXpQfcT473t9V4jAa4pbgr6afAg"
+			]
+		},
+		"@axelar-network/interchain-token-service/contracts/interfaces/IInterchainTokenExecutable.sol": {
+			"keccak256": "0x206b0a0a0bede558dc8ea275d9c828416a63a374672b138ff7dd2dd817d94476",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://92ddc40c015c625ed98052c69891fd9aecf2de8341ee10f64777e768e0e9a738",
+				"dweb:/ipfs/QmRZ3bxv5jBiYbfc6fH5fKj4vzMicVfaBFkM2LqtsBD6Tp"
+			]
+		},
+		"@axelar-network/interchain-token-service/contracts/interfaces/IInterchainTokenExpressExecutable.sol": {
+			"keccak256": "0xcd52266df2140e02b4834d1a41dd38ce3c366e024bafec2d2c603d77bdff8350",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://13f4d1d1b9a80ad4c16ebcb644a708b2a980cee04c399c188e245811ac28bcfe",
+				"dweb:/ipfs/Qmf41i1kdbQeEAz4FwtNDUL2swm6pbr4QfqUVAzTp3NYh6"
+			]
+		},
+		"contracts/InterchainCounter.sol": {
+			"keccak256": "0xb02582ad6582e88867b37e9a903b2b11e70ee3e5040e36894f772d0a7b5f08b9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://776bc9b333dd0ba2cf656852dd7162e702083fc23eb15a3381c951926d574582",
+				"dweb:/ipfs/QmQthMTiQeho44YABvkW4D6UMMuEL5jCYrXbxWubVqu5oo"
+			]
+		}
+	},
+	"version": 1
+}
